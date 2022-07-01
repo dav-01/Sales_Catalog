@@ -12,6 +12,20 @@
                         @csrf
 
                         <div class="row mb-3">
+                            <label for="cedula" class="col-md-4 col-form-label text-md-end">{{ __('Cedula') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="cedula" type="text" class="form-control @error('cedula') is-invalid @enderror" name="cedula" value="{{ old('Cedula') }}" required autocomplete="cedula" autofocus>
+
+                                @error('cedula')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
