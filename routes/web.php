@@ -16,18 +16,20 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('auth/login');
+    if (Auth::user()) {
+        return view('/home');
+    } else {
+        return view('auth/login');
+    }
 });
 
 Auth::routes();
 
-Route::group(['middleware' => 'admin'], function(){
-    Route::get('/admin', [App\Http\Controllers\HomeController::class, 'admin'])->name('admin');
-
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 });
 
 
 
 
 Route::get('/home',  [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
