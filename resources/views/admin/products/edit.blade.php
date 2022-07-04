@@ -30,14 +30,6 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Descripcion del producto') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="descripcion" type="text" class="form-control @error('name') is-invalid @enderror" name="description" value="{{$product->description }}" required autocomplete="descripcion" autofocus>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Precio') }}</label>
 
                             <div class="col-md-6">

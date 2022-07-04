@@ -12,7 +12,6 @@
                         <tr>
                             <th>Código</th>
                             <th>Nombre</th>
-                            <th>Descripcion</th>
                             <th>Precio</th>
                             <th>Existencia</th>
                             <th colspan="2" style="text-align: center">Accion</th>
@@ -23,7 +22,6 @@
                             <tr>
                                 <td>{{ $product->code }}</td>
                                 <td>{{ $product->name }}</td>
-                                <td>{{ $product->description }}</td>
                                 <td>{{ $product->price }}</td>
                                 <td>{{ $product->stock }}</td>
                                 <td>

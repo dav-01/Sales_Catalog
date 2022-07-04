@@ -21,7 +21,7 @@ class ProductController extends Controller
             return view('admin/products.index', ['products' => Product::all()]);
         }
         else{
-            return view('products.index');
+            return view('products.index', ['products' => Product::all()]);
         }
     }
 
