@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     if (Auth::user()) {
-        return view('home');
+        return view('products.index');
     } else {
         return view('auth/login');
     }
@@ -25,11 +25,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::group(['middleware' => 'admin'], function () {
-    Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
-});
+// Route::group(['middleware' => 'admin'], function () {
+  //  Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+//});
 
+//Route::get('/home',  [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 
+Route::get('/product', [\App\Http\Controllers\ProductController::class, 'index'])->name('product');
 
-
-Route::get('/home',  [App\Http\Controllers\HomeController::class, 'index'])->name('home');

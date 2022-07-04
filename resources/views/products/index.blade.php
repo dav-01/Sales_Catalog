@@ -4,5 +4,5 @@
 
 @section('content')
 
-<h1>Hola Administrador</h1>
+<h1>Hola cliente</h1>
 @endsection
