@@ -3,6 +3,7 @@
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,11 +27,13 @@ Route::get('/', function () {
 Auth::routes();
 
 // Route::group(['middleware' => 'admin'], function () {
-  //  Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
-//});
+   // Route::get('/product/create', [App\Http\Controllers\AdminController::class, 'create'])->name('admin');
+// });
 
 //Route::get('/home',  [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 
-Route::get('/product', [\App\Http\Controllers\ProductController::class, 'index'])->name('product');
+//Route::get('/product', [\App\Http\Controllers\ProductController::class, 'index'])->name('product');
 
+
+Route::resource('product', ProductController::class);
