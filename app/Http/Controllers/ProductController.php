@@ -34,9 +34,27 @@ class ProductController extends Controller
     }
 
     public function store(Request $request ){
-        $producto = new Product($request->input());
+
+        $request->validate([
+            'name' => 'required', 'price' => 'required', 'stock' => 'required'
+        ]);
+
+        $producto = $request->all();
+
+        if($img = $request->file('img')){
+            $rutaGuardarImg = 'img/';
+            $imagenProduct = date('YmdHis'). "." . $img->getClientOriginalExtension();
+            $img->move($rutaGuardarImg, $imagenProduct);
+            $product['img'] = "$imagenProduct";
+        }
+
+        Product::create($producto);
+        return redirect()->route('product.index');
+
+
+        /*$producto = new Product($request->input());
         $producto->saveOrFail();
-        return redirect()->route("product.index")->with("mensaje", "Producto guardado");
+        return redirect()->route("product.index")->with("mensaje", "Producto guardado");*/
     }
 
     public function show(Product $product){

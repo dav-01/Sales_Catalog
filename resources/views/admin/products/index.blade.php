@@ -30,7 +30,8 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <form action="{{ route('product.destroy', [$product]) }}" method="post">
+                                    <form action="{{ route('product.destroy', [$product]) }}" method="post"
+                                        class="formEliminar">
                                         @method('delete')
                                         @csrf
                                         <button type="submit" class="btn btn-danger">Eliminar
