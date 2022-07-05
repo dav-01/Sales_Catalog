@@ -14,7 +14,8 @@
                             <th>Nombre</th>
                             <th>Precio</th>
                             <th>Existencia</th>
-                            <th colspan="2" style="text-align: center">Accion</th>
+                            <th>Imagen</th>
+                            <th class="text-center" >Accion</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -24,20 +25,19 @@
                                 <td>{{ $product->name }}</td>
                                 <td>{{ $product->price }}</td>
                                 <td>{{ $product->stock }}</td>
-                                <td>
-                                    <a class="btn btn-warning" href="{{ route('product.edit', $product) }}">Editar
+                                <td></td>
+                                <td class="text-center">
+                                    <a class="btn btn-warning" style="display: inline-block" href="{{ route('product.edit', $product) }}">Editar
                                         <i class="fa fa-edit"></i>
                                     </a>
-                                </td>
-                                <td>
                                     <form action="{{ route('product.destroy', [$product]) }}" method="post"
-                                        class="formEliminar">
-                                        @method('delete')
-                                        @csrf
-                                        <button type="submit" class="btn btn-danger">Eliminar
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </form>
+                                    class="formEliminar" style="display: inline-block">
+                                    @method('delete')
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger" >Eliminar
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </form>
                                 </td>
                             </tr>
                         @endforeach
