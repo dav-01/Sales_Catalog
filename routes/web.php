@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrderController;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -37,3 +38,6 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->na
 
 
 Route::resource('product', ProductController::class);
+
+
+Route::resource('order', OrderController::class);
