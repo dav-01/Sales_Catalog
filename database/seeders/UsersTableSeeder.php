@@ -18,24 +18,24 @@ class UsersTableSeeder extends Seeder
         // Admin - Clave 12345678
         User::create([
             'cedula' => '100554546',
-            'name' => 'Cliente 2',
-            'email' => 'cliente2@gmail.com',
+            'name' => 'Osmeider Morales',
+            'email' => 'osme@gmail.com',
             'password' => '$2a$12$MjJrmSi776xkVpq5kiSE..vJBlk8p655VWVx3I6HefaweOfm7aJe.',
         ]);
 
         // Cliente 1 - Clave 12345678
         User::create([
-            'cedula' => '100554546',
-            'name' => 'Cliente 2',
-            'email' => 'cliente2@gmail.com',
+            'cedula' => '100554598',
+            'name' => 'Jairo Rada',
+            'email' => 'jairo@gmail.com',
             'password' => '$2a$12$MjJrmSi776xkVpq5kiSE..vJBlk8p655VWVx3I6HefaweOfm7aJe.',
         ]);
 
         // Cliente 2 - Clave 12345678
         User::create([
-            'cedula' => '100554546',
-            'name' => 'Cliente 2',
-            'email' => 'cliente2@gmail.com',
+            'cedula' => '100554456',
+            'name' => 'Arley Mejia',
+            'email' => 'arley@gmail.com',
             'password' => '$2a$12$MjJrmSi776xkVpq5kiSE..vJBlk8p655VWVx3I6HefaweOfm7aJe.',
         ]);
 
