@@ -11,7 +11,7 @@ class UsersTableSeeder extends Seeder
     /**
      * Run the database seeds.
      *
-     * @return void
+     * @return void 
      */
     public function run()
     {
@@ -21,6 +21,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'Osmeider Morales',
             'email' => 'osme@gmail.com',
             'password' => '$2a$12$MjJrmSi776xkVpq5kiSE..vJBlk8p655VWVx3I6HefaweOfm7aJe.',
+            'role' => 1,
         ]);
 
         // Cliente 1 - Clave 12345678
